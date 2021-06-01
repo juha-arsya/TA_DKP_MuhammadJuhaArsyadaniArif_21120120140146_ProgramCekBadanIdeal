@@ -39,7 +39,7 @@ def bmi_index(bmi):
 
 
 app = Tk()
-app.geometry('350x300')
+app.geometry('350x325')
 app.title('Program Cek Badan Ideal')
 app.config(bg='#a1eafb')
 
@@ -96,6 +96,20 @@ reset_btn.pack(side=LEFT)
 
 trim_btn = Button(frame, text='Terimakasih',
                   command=ucapan, bg='#3d6cb9', fg='white')
-trim_btn.grid(row=6, columnspan=3, pady=10)
+trim_btn.grid(row=7, columnspan=3, pady=10)
+
+# TABEL
+frame4 = Frame(frame)
+frame4.grid(row=6, columnspan=3, pady=1)
+frame4.config(bg='#a1eafb')
+
+tabel1_lb = Label(frame4, text='BMI < 18.5 = Kurus', bg='#a1eafb')
+tabel1_lb.pack(side=TOP)
+tabel2_lb = Label(frame4, text='BMI 18.5 - 24.9 = Ideal', bg='#a1eafb')
+tabel2_lb.pack(side=TOP)
+tabel3_lb = Label(frame4, text='BMI 24.9 - 29.9 = Gemuk', bg='#a1eafb')
+tabel3_lb.pack(side=TOP)
+tabel4_lb = Label(frame4, text='BMI > 29.9 = Obesitas', bg='#a1eafb')
+tabel4_lb.pack(side=TOP)
 
 app.mainloop()
